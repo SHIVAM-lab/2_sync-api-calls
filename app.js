@@ -9,9 +9,9 @@ app.get("/", function(req,res){
     res.sendFile(__dirname +"/index.html");
 });
  app.post("/",(req, res) => {
-         const city = null; 
+         let city = null; 
          city = _.lowerCase(req.body.CityName);
-         const country = null;
+         let country = null;
          country = _.lowerCase(req.body.CountryName);
          const appid= null;//it would be the api key of openweathermap
          if ((city == null || country == null) || (city == null && country == null)) {
