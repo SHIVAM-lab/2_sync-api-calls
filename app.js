@@ -21,7 +21,7 @@ app.get("/", function(req,res){
 
 
          Promise.all([
-             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}"&appid=${appid}&unit=metric`),
+             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&unit=metric`),
              fetch(`https://api.covid19api.com/country/${country}/status/confirmed`)
          ]).then(function (responses) {
              // Get a JSON object from each of the responses
